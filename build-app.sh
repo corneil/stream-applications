@@ -44,8 +44,8 @@ pushd "$PROJECT_FOLDER" >/dev/null
     check_env ARTIFACTORY_USERNAME
     check_env ARTIFACTORY_PASSWORD
   fi
-  if [[ "$VERSION" == "4."* ]]; then
-    JDKS="17"
+  if [[ "$VERSION" != "3."* ]]; then
+    JDKS="17 21"
     if [ "$DEFAULT_JDK" == "" ]; then
       DEFAULT_JDK=17
     fi
